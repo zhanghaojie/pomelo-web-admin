@@ -1,0 +1,31 @@
+
+@headerHeight: 48px;
+@headerBackgroundColor: #123456;
+@mainColor: #f8851f;
+
+
+#header {
+  display: block;
+  height: @headerHeight;
+  line-height: @headerHeight;
+  margin: 0px;
+  padding: 0px;
+  background-color: @headerBackgroundColor;
+  vertical-align: middle;
+
+  img#logo {
+    width: @headerHeight - 8px;
+    height: auto;
+  }
+
+  #logo-group {
+    h4 {
+      color: @mainColor;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 8px;
+      padding: 0px;
+      display: inline-block;
+    }
+  }
+}

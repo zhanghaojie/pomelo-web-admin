@@ -6,6 +6,7 @@ Package.describe({
 Npm.depends({"socket.io-client": "0.9.16"});
 
 Package.on_use(function(api) {
+	api.use("meteor");
 	api.add_files(["protocol.js", "pomelo_admin_client.js", "md5.js"], "server");
 	api.export("PomeloAdminClient", "server");
 })

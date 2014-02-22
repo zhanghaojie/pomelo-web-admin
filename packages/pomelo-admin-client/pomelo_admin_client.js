@@ -23,6 +23,7 @@ util.inherits(Client, EventEmitter);
 
 Client.prototype = {
 	connect: function(id, host, port, cb) {
+		cb = Meteor.bindEnvironment(cb);
 		this.id = id;
 		var self = this;
 
@@ -86,6 +87,7 @@ Client.prototype = {
 	},
 
 	request: function(moduleId, msg, cb) {
+		cb = Meteor.bindEnvironment(cb);
 		var id = this.reqId++;
 		// something dirty: attach current client id into msg
 		msg = msg || {};
@@ -106,6 +108,7 @@ Client.prototype = {
 	},
 
 	command: function(command, moduleId, msg, cb) {
+		cb = Meteor.bindEnvironment(cb);
 		var id = this.reqId++;
 		msg = msg || {};
 		msg.clientId = this.id;
@@ -153,7 +156,7 @@ Client.prototype = {
 				_.extend(cloneArgv, argv);
 				self.request(moduleId, cloneArgv, cb);
 			}
-			return method;
+			return Meteor.bindEnvironment(method);
 		}
 		for(var index = 0; index < modulesConfig.length; index++) {
 			var moduleConfig = modulesConfig[index];
