@@ -1,10 +1,29 @@
 #left-panel {
   width: 220px;
-  min-height: 100%;
+  min-height: 1024px;
   background-color: #555555;
   position: absolute;
-  color: #ffffff;
-  font-size: 14;
+  color: #eeeeee;
+  /*
+  nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    li a {
+      display: block;
+      padding: 10px 10px 10px 11px;
+      font-size: 14px;
+      color: @gray-light;
+      font-weight: 400;
+      text-decoration: none!important;
+    }
+  }
+  a:hover {
+    color: @gray-lighter;
+  }
+  */
 }
 #left-panel #login-info {
   line-height: 39px;

@@ -1,13 +1,13 @@
 
-@import "variable.less";
+@import "variable";
+@import "bootstrap_vars";
 
 #left-panel {
   width: @leftPanelWidth;
   min-height: @leftPanelMinHeight;
-  background-color: @leftPanelBackgroundColor;
+  background-color: @gray;
   position: absolute;
-  color: @leftPanelColor;
-  font-size: @leftPanelFontSize;
+  color: @gray-lighter;
 
   #login-info {
     line-height: 39px;
@@ -21,4 +21,24 @@
       padding: 0 10px;
     }
   }
+/*
+  nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    li a {
+      display: block;
+      padding: 10px 10px 10px 11px;
+      font-size: 14px;
+      color: @gray-light;
+      font-weight: 400;
+      text-decoration: none!important;
+    }
+  }
+  a:hover {
+    color: @gray-lighter;
+  }
+  */
 }

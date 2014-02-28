@@ -1,7 +1,19 @@
 
+<head>
+	<title>Game Server Admin</title>
+</head>
+
+<body>
+{{> index}}
+</body>
+
 <template name="index">
-	{{> header}}
-	{{> leftPanel}}
-	{{> main}}
+	{{#if isLogin}}
+		{{> header}}
+		{{> leftPanel}}
+		{{> main}}
+	{{else}}
+		{{> login}}
+	{{/if}}
 </template>
 

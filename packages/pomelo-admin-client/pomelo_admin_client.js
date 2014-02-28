@@ -2,6 +2,7 @@
 var io = Npm.require('socket.io-client');
 var EventEmitter = Npm.require("events").EventEmitter;
 var util = Npm.require("util");
+var _ = Npm.require("underscore");
 
 var Client = function(opt) {
 	EventEmitter.call(this);
@@ -21,7 +22,7 @@ var Client = function(opt) {
 
 util.inherits(Client, EventEmitter);
 
-Client.prototype = {
+_.extend(Client.prototype, {
 	connect: function(id, host, port, cb) {
 		cb = Meteor.bindEnvironment(cb);
 		this.id = id;
@@ -172,8 +173,7 @@ Client.prototype = {
 			self.registerModule(moduleId, module);
 		}
 	}
-};
-
+});
 
 Client.ST_INITED = 1;
 Client.ST_CONNECTED = 2;

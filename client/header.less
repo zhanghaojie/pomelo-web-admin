@@ -1,26 +1,23 @@
 
-@headerHeight: 48px;
-@headerBackgroundColor: #123456;
-@mainColor: #f8851f;
-
+@import "bootstrap_vars.less";
 
 #header {
   display: block;
-  height: @headerHeight;
-  line-height: @headerHeight;
+  height: @navbar-height;
+  line-height: @navbar-height;
   margin: 0px;
   padding: 0px;
-  background-color: @headerBackgroundColor;
+  background-color: @navbar-default-bg;
   vertical-align: middle;
 
   img#logo {
-    width: @headerHeight - 8px;
+    width: @navbar-height - 8px;
     height: auto;
   }
 
   #logo-group {
     h4 {
-      color: @mainColor;
+      color: @navbar-default-color;
       margin-top: 0px;
       margin-bottom: 0px;
       margin-left: 8px;
