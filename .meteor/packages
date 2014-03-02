@@ -7,7 +7,7 @@ standard-app-packages
 preserve-inputs
 pomelo-admin-client
 underscore
-jquery
 accounts-password
 bootstrap3
 d3
+less

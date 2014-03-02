@@ -15,7 +15,5 @@ Meteor.startup(function() {
 
 
 WebApp.connectHandlers.use("/callback", function(req, res, next) {
-	console.log(req.query);
-	//next();
 	res.end();
 });

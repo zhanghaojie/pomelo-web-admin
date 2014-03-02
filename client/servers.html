@@ -3,15 +3,30 @@
 	<table class="table table-striped">
 		<thead>
 		<tr>
-			<th>Host Name</th>
 			<th>Server Id</th>
+			<th>Host Name</th>
 			<th>Operation</th>
 		</tr>
 		</thead>
-
 		<tbody>
-
+			{{#each servers}}
+				<tr>
+					<td>{{host}}</td>
+					<td>{{serverId}}</td>
+					<td>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary btn-sm" data-toggle="dropdown">
+								Operation <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Pause</a></li>
+								<li><a href="#">Restart</a></li>
+								<li><a href="#">Stop</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			{{/each}}
 		</tbody>
 	</table>
-
 </template>
